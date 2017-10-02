@@ -16,4 +16,5 @@ DerivedData
 *.xcworkspacedata
 *.xcuserstate
 *.xcuserdatad
+/collectively/Keys.plist
 /collectively/Pods
