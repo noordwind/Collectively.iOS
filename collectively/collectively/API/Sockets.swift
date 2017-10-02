@@ -10,7 +10,7 @@ import Foundation
 
 
 class Socket {
-    let shared = Socket()
+    static let shared = Socket()
     
     var inputStream: InputStream!
     var outputStream: OutputStream!

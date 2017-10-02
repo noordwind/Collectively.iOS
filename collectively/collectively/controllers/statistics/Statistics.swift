@@ -6,4 +6,8 @@
 //  Copyright © 2017 collectively. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Statistics: UIViewController {
+    
+}

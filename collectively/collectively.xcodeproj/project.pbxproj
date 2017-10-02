@@ -25,6 +25,9 @@
 		8915102E1F7D7E4500252319 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915102D1F7D7E4500252319 /* Profile.swift */; };
 		891510301F7D7E5500252319 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915102F1F7D7E5500252319 /* Statistics.swift */; };
 		891510321F7D7E5E00252319 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891510311F7D7E5E00252319 /* Statistics.storyboard */; };
+		894109C61F829E4A00D25D81 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894109C51F829E4A00D25D81 /* RoundedButton.swift */; };
+		894109C81F82A0AA00D25D81 /* Msg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894109C71F82A0AA00D25D81 /* Msg.swift */; };
+		894109CE1F82A1EC00D25D81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 894109D01F82A1EC00D25D81 /* Localizable.strings */; };
 		89D064331F82906B007FF348 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064321F82906B007FF348 /* APIManager.swift */; };
 		89D064351F8291AC007FF348 /* Sockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064341F8291AC007FF348 /* Sockets.swift */; };
 		89D064371F8293A6007FF348 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064361F8293A6007FF348 /* Authentication.swift */; };
@@ -78,6 +81,10 @@
 		891510311F7D7E5E00252319 /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		8917EEFD1F7D821C004D4BFC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		8917EEFF1F7D821E004D4BFC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		894109C51F829E4A00D25D81 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		894109C71F82A0AA00D25D81 /* Msg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Msg.swift; sourceTree = "<group>"; };
+		894109CF1F82A1EC00D25D81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		894109D11F82A1FC00D25D81 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		89D064321F82906B007FF348 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		89D064341F8291AC007FF348 /* Sockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sockets.swift; sourceTree = "<group>"; };
 		89D064361F8293A6007FF348 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -144,6 +151,7 @@
 		89150FEA1F7D7AD400252319 /* collectively */ = {
 			isa = PBXGroup;
 			children = (
+				894109C41F829E3900D25D81 /* utils */,
 				89D064311F829059007FF348 /* API */,
 				89D064301F829044007FF348 /* controllers */,
 				89150FEF1F7D7AD400252319 /* Main.storyboard */,
@@ -194,6 +202,7 @@
 				89150FF71F7D7AD400252319 /* Info.plist */,
 				89150FF21F7D7AD400252319 /* Assets.xcassets */,
 				89150FF41F7D7AD400252319 /* LaunchScreen.storyboard */,
+				894109D01F82A1EC00D25D81 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -216,13 +225,13 @@
 			path = profile;
 			sourceTree = "<group>";
 		};
-		891510261F7D7E1900252319 /* add */ = {
+		891510261F7D7E1900252319 /* users */ = {
 			isa = PBXGroup;
 			children = (
 				891510271F7D7E2800252319 /* Users.storyboard */,
 				891510291F7D7E3200252319 /* Users.swift */,
 			);
-			path = add;
+			path = users;
 			sourceTree = "<group>";
 		};
 		8917EEFC1F7D821C004D4BFC /* Frameworks */ = {
@@ -237,6 +246,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		894109C41F829E3900D25D81 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				894109C51F829E4A00D25D81 /* RoundedButton.swift */,
+				894109C71F82A0AA00D25D81 /* Msg.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		89D064301F829044007FF348 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,7 +262,7 @@
 				891510241F7D7E0300252319 /* statistics */,
 				8915101E1F7D7B1700252319 /* Map */,
 				891510251F7D7E0D00252319 /* profile */,
-				891510261F7D7E1900252319 /* add */,
+				891510261F7D7E1900252319 /* users */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -370,6 +388,7 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 89150FDF1F7D7AD400252319;
 			productRefGroup = 89150FE91F7D7AD400252319 /* Products */;
@@ -393,6 +412,7 @@
 				891510201F7D7B2100252319 /* Map.storyboard in Resources */,
 				89150FF31F7D7AD400252319 /* Assets.xcassets in Resources */,
 				891510281F7D7E2800252319 /* Users.storyboard in Resources */,
+				894109CE1F82A1EC00D25D81 /* Localizable.strings in Resources */,
 				8915102C1F7D7E3B00252319 /* Profile.storyboard in Resources */,
 				89D064391F8295D0007FF348 /* Keys.plist in Resources */,
 				89150FF11F7D7AD400252319 /* Main.storyboard in Resources */,
@@ -453,13 +473,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-collectivelyUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		37FDE2028D732E18B49DFB38 /* [CP] Embed Pods Frameworks */ = {
@@ -468,9 +491,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-collectively/Pods-collectively-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -483,13 +519,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-collectivelyTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7BAEA3AE2F25B78935B3BBEF /* [CP] Copy Pods Resources */ = {
@@ -543,13 +582,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-collectively-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -560,12 +602,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				891510301F7D7E5500252319 /* Statistics.swift in Sources */,
+				894109C61F829E4A00D25D81 /* RoundedButton.swift in Sources */,
 				891510221F7D7B3200252319 /* MapController.swift in Sources */,
 				8915102E1F7D7E4500252319 /* Profile.swift in Sources */,
 				8915101D1F7D7B0A00252319 /* Login.swift in Sources */,
 				89D064351F8291AC007FF348 /* Sockets.swift in Sources */,
 				8915102A1F7D7E3200252319 /* Users.swift in Sources */,
 				89150FEC1F7D7AD400252319 /* AppDelegate.swift in Sources */,
+				894109C81F82A0AA00D25D81 /* Msg.swift in Sources */,
 				89D064331F82906B007FF348 /* APIManager.swift in Sources */,
 				89D064371F8293A6007FF348 /* Authentication.swift in Sources */,
 			);
@@ -619,6 +663,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		894109D01F82A1EC00D25D81 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				894109CF1F82A1EC00D25D81 /* en */,
+				894109D11F82A1FC00D25D81 /* pl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -626,6 +679,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -683,6 +737,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Alamofire
 
 class APIManager {
     let base = "https://api-dev.becollective.ly/"
@@ -18,9 +18,8 @@ class APIManager {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 60
         configuration.timeoutIntervalForResource = 60
-        self.alamoFireManager = Alamofire.SessionManager(configuration: configuration)
+        self.alamo = Alamofire.SessionManager(configuration: configuration)
     }
     
-    
-    
+    static let auth = Authentication()
 }
