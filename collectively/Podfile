@@ -8,6 +8,7 @@ target 'collectively' do
   # Pods for collectively
     pod 'FBSDKCoreKit'
     pod 'FBSDKLoginKit'
+    pod 'AFNetworking'
 
   target 'collectivelyTests' do
     inherit! :search_paths

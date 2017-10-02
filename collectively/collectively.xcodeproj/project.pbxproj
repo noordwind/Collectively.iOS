@@ -10,7 +10,6 @@
 		148B280B9083457664C8A1DD /* Pods_collectively.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6765A99124100B60E1985E7F /* Pods_collectively.framework */; };
 		6B8ED5FB57990FD982E3993F /* Pods_collectivelyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6F02C0BB501ABD5C5B4422 /* Pods_collectivelyTests.framework */; };
 		89150FEC1F7D7AD400252319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89150FEB1F7D7AD400252319 /* AppDelegate.swift */; };
-		89150FEE1F7D7AD400252319 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89150FED1F7D7AD400252319 /* ViewController.swift */; };
 		89150FF11F7D7AD400252319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89150FEF1F7D7AD400252319 /* Main.storyboard */; };
 		89150FF31F7D7AD400252319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89150FF21F7D7AD400252319 /* Assets.xcassets */; };
 		89150FF61F7D7AD400252319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89150FF41F7D7AD400252319 /* LaunchScreen.storyboard */; };
@@ -26,6 +25,10 @@
 		8915102E1F7D7E4500252319 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915102D1F7D7E4500252319 /* Profile.swift */; };
 		891510301F7D7E5500252319 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915102F1F7D7E5500252319 /* Statistics.swift */; };
 		891510321F7D7E5E00252319 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891510311F7D7E5E00252319 /* Statistics.storyboard */; };
+		89D064331F82906B007FF348 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064321F82906B007FF348 /* APIManager.swift */; };
+		89D064351F8291AC007FF348 /* Sockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064341F8291AC007FF348 /* Sockets.swift */; };
+		89D064371F8293A6007FF348 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064361F8293A6007FF348 /* Authentication.swift */; };
+		89D064391F8295D0007FF348 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89D064381F8295D0007FF348 /* Keys.plist */; };
 		C8627A3CA5635946DF77F159 /* Pods_collectivelyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FB3AC42D4889E78BA331A0 /* Pods_collectivelyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +56,6 @@
 		75FB3AC42D4889E78BA331A0 /* Pods_collectivelyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_collectivelyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89150FE81F7D7AD400252319 /* collectively.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collectively.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89150FEB1F7D7AD400252319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		89150FED1F7D7AD400252319 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89150FF01F7D7AD400252319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89150FF21F7D7AD400252319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89150FF51F7D7AD400252319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,10 @@
 		891510311F7D7E5E00252319 /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		8917EEFD1F7D821C004D4BFC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		8917EEFF1F7D821E004D4BFC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		89D064321F82906B007FF348 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		89D064341F8291AC007FF348 /* Sockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sockets.swift; sourceTree = "<group>"; };
+		89D064361F8293A6007FF348 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		89D064381F8295D0007FF348 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		8F796AB714B6562DB8A02B46 /* Pods-collectively.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collectively.debug.xcconfig"; path = "Pods/Target Support Files/Pods-collectively/Pods-collectively.debug.xcconfig"; sourceTree = "<group>"; };
 		B3A6ECCEAAF87E75A682313B /* Pods-collectivelyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-collectivelyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-collectivelyTests/Pods-collectivelyTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA6F02C0BB501ABD5C5B4422 /* Pods_collectivelyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_collectivelyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +120,7 @@
 		89150FDF1F7D7AD400252319 = {
 			isa = PBXGroup;
 			children = (
+				89D064381F8295D0007FF348 /* Keys.plist */,
 				89150FEA1F7D7AD400252319 /* collectively */,
 				891510231F7D7BCE00252319 /* Supporting Files */,
 				89150FFF1F7D7AD500252319 /* collectivelyTests */,
@@ -137,12 +144,8 @@
 		89150FEA1F7D7AD400252319 /* collectively */ = {
 			isa = PBXGroup;
 			children = (
-				891510261F7D7E1900252319 /* add */,
-				891510251F7D7E0D00252319 /* profile */,
-				891510241F7D7E0300252319 /* statistics */,
-				8915101E1F7D7B1700252319 /* Map */,
-				891510191F7D7AF300252319 /* Login */,
-				89150FED1F7D7AD400252319 /* ViewController.swift */,
+				89D064311F829059007FF348 /* API */,
+				89D064301F829044007FF348 /* controllers */,
 				89150FEF1F7D7AD400252319 /* Main.storyboard */,
 			);
 			path = collectively;
@@ -232,6 +235,28 @@
 				75FB3AC42D4889E78BA331A0 /* Pods_collectivelyUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89D064301F829044007FF348 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				891510191F7D7AF300252319 /* Login */,
+				891510241F7D7E0300252319 /* statistics */,
+				8915101E1F7D7B1700252319 /* Map */,
+				891510251F7D7E0D00252319 /* profile */,
+				891510261F7D7E1900252319 /* add */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		89D064311F829059007FF348 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				89D064321F82906B007FF348 /* APIManager.swift */,
+				89D064341F8291AC007FF348 /* Sockets.swift */,
+				89D064361F8293A6007FF348 /* Authentication.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		D55B6BE2F9D9DFF6D217B160 /* Pods */ = {
@@ -369,6 +394,7 @@
 				89150FF31F7D7AD400252319 /* Assets.xcassets in Resources */,
 				891510281F7D7E2800252319 /* Users.storyboard in Resources */,
 				8915102C1F7D7E3B00252319 /* Profile.storyboard in Resources */,
+				89D064391F8295D0007FF348 /* Keys.plist in Resources */,
 				89150FF11F7D7AD400252319 /* Main.storyboard in Resources */,
 				891510321F7D7E5E00252319 /* Statistics.storyboard in Resources */,
 			);
@@ -537,9 +563,11 @@
 				891510221F7D7B3200252319 /* MapController.swift in Sources */,
 				8915102E1F7D7E4500252319 /* Profile.swift in Sources */,
 				8915101D1F7D7B0A00252319 /* Login.swift in Sources */,
-				89150FEE1F7D7AD400252319 /* ViewController.swift in Sources */,
+				89D064351F8291AC007FF348 /* Sockets.swift in Sources */,
 				8915102A1F7D7E3200252319 /* Users.swift in Sources */,
 				89150FEC1F7D7AD400252319 /* AppDelegate.swift in Sources */,
+				89D064331F82906B007FF348 /* APIManager.swift in Sources */,
+				89D064371F8293A6007FF348 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

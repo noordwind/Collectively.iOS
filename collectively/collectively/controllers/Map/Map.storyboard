@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map Controller-->
+        <scene sceneID="D8X-tH-dLH">
+            <objects>
+                <viewController id="KyD-J4-XUe" customClass="MapController" customModule="collectively" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="opZ-vt-I6s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tCy-z1-wcT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tCy-z1-wcT" firstAttribute="leading" secondItem="opZ-vt-I6s" secondAttribute="leading" id="Kz8-e6-WtO"/>
+                            <constraint firstItem="tCy-z1-wcT" firstAttribute="top" secondItem="opZ-vt-I6s" secondAttribute="top" id="UYd-Ow-TBd"/>
+                            <constraint firstAttribute="trailing" secondItem="tCy-z1-wcT" secondAttribute="trailing" id="bai-YP-WHu"/>
+                            <constraint firstAttribute="bottom" secondItem="tCy-z1-wcT" secondAttribute="bottom" id="zmE-wJ-7bQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ypt-ZZ-Bh4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E7B-le-qTP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iu7-WD-t4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311.19999999999999" y="147.97601199400302"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pge-vY-vNT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3f3-1a-8uO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zib-84-BM2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KyD-J4-XUe" kind="relationship" relationship="rootViewController" id="EEg-9j-wVE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="be8-la-GcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="148"/>
+        </scene>
+    </scenes>
+</document>
