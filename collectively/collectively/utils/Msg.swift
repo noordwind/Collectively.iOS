@@ -18,4 +18,7 @@ class Msg {
     static var OK: String {
         return "OK".localized()
     }
+    static var hello: String {
+        return "hello".localized()
+    }
 }

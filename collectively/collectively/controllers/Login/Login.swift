@@ -55,7 +55,7 @@ class Login: UIViewController {
             } else {
                 if let res = result as? [String: String] {
                     print(res)
-                    HUD.show(.labeledSuccess(title: nil, subtitle: "Cześć!\n" + (res["first_name"] ?? "")))
+                    HUD.show(.labeledSuccess(title: nil, subtitle: Msg.hello + "\n" + (res["first_name"] ?? "")))
                     HUD.hide(afterDelay: 3)
                     self.apiAuth(token: token)
                     return
