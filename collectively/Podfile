@@ -11,6 +11,8 @@ target 'collectively' do
     pod 'Alamofire'
     pod 'Localize-Swift'
     pod 'PKHUD', :git => 'https://github.com/pkluz/PKHUD.git', :branch => 'release/swift4'
+    pod 'AlamofireObjectMapper'
+    pod 'ObjectMapper'
     
   target 'collectivelyTests' do
     inherit! :search_paths

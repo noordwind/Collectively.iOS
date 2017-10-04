@@ -19,28 +19,78 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tCy-z1-wcT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KyD-J4-XUe" id="r1G-pU-vTg"/>
+                                </connections>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-TP-7rk" userLabel="burger">
+                                <rect key="frame" x="10" y="560" width="48" height="48"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonsbackground" translatesAutoresizingMaskIntoConstraints="NO" id="a99-tJ-xtL">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buttonsbackground" translatesAutoresizingMaskIntoConstraints="NO" id="m0a-ko-h1k">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buttonsbackground" translatesAutoresizingMaskIntoConstraints="NO" id="tnz-Oc-3vc">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonburger" translatesAutoresizingMaskIntoConstraints="NO" id="djH-fy-s9f">
+                                        <rect key="frame" x="15" y="15" width="18" height="18"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exr-kX-zWe">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="djH-fy-s9f" secondAttribute="bottom" constant="15" id="5mh-KJ-C3e"/>
+                                    <constraint firstItem="Exr-kX-zWe" firstAttribute="leading" secondItem="gBg-TP-7rk" secondAttribute="leading" id="892-7z-FEs"/>
+                                    <constraint firstItem="a99-tJ-xtL" firstAttribute="top" secondItem="gBg-TP-7rk" secondAttribute="top" id="HbY-hI-dps"/>
+                                    <constraint firstAttribute="bottom" secondItem="Exr-kX-zWe" secondAttribute="bottom" id="Hx6-0z-W6j"/>
+                                    <constraint firstItem="djH-fy-s9f" firstAttribute="top" secondItem="gBg-TP-7rk" secondAttribute="top" constant="15" id="KTX-kz-vpZ"/>
+                                    <constraint firstItem="Exr-kX-zWe" firstAttribute="top" secondItem="gBg-TP-7rk" secondAttribute="top" id="R58-cD-fuK"/>
+                                    <constraint firstAttribute="width" constant="48" id="dTQ-cd-lLe"/>
+                                    <constraint firstAttribute="trailing" secondItem="djH-fy-s9f" secondAttribute="trailing" constant="15" id="h34-GK-fkN"/>
+                                    <constraint firstAttribute="trailing" secondItem="a99-tJ-xtL" secondAttribute="trailing" id="lL6-C6-7w7"/>
+                                    <constraint firstItem="a99-tJ-xtL" firstAttribute="leading" secondItem="gBg-TP-7rk" secondAttribute="leading" id="oBt-V9-Zrr"/>
+                                    <constraint firstAttribute="bottom" secondItem="a99-tJ-xtL" secondAttribute="bottom" id="rfj-Ef-2EQ"/>
+                                    <constraint firstItem="djH-fy-s9f" firstAttribute="leading" secondItem="gBg-TP-7rk" secondAttribute="leading" constant="15" id="vS6-b0-Edk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Exr-kX-zWe" secondAttribute="trailing" id="wm6-7e-nIC"/>
+                                    <constraint firstAttribute="height" constant="48" id="yhP-oo-Fxv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tCy-z1-wcT" firstAttribute="leading" secondItem="opZ-vt-I6s" secondAttribute="leading" id="Kz8-e6-WtO"/>
                             <constraint firstItem="tCy-z1-wcT" firstAttribute="top" secondItem="opZ-vt-I6s" secondAttribute="top" id="UYd-Ow-TBd"/>
                             <constraint firstAttribute="trailing" secondItem="tCy-z1-wcT" secondAttribute="trailing" id="bai-YP-WHu"/>
+                            <constraint firstItem="gBg-TP-7rk" firstAttribute="leading" secondItem="Ypt-ZZ-Bh4" secondAttribute="leading" constant="10" id="leP-fd-rQ1"/>
+                            <constraint firstItem="Ypt-ZZ-Bh4" firstAttribute="bottom" secondItem="gBg-TP-7rk" secondAttribute="bottom" constant="10" id="zaB-kk-IAC"/>
                             <constraint firstAttribute="bottom" secondItem="tCy-z1-wcT" secondAttribute="bottom" id="zmE-wJ-7bQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ypt-ZZ-Bh4"/>
                     </view>
                     <navigationItem key="navigationItem" id="E7B-le-qTP"/>
+                    <connections>
+                        <outlet property="mapView" destination="tCy-z1-wcT" id="MyH-qA-peX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iu7-WD-t4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="311.19999999999999" y="147.97601199400302"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Map-->
         <scene sceneID="pge-vY-vNT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3f3-1a-8uO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="lista" id="mBM-Vh-SXc"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zib-84-BM2">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -55,4 +105,9 @@
             <point key="canvasLocation" x="-484" y="148"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="buttonburger" width="39" height="39"/>
+        <image name="buttonsbackground" width="140" height="140"/>
+        <image name="lista" width="19" height="20"/>
+    </resources>
 </document>

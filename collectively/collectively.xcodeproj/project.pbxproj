@@ -25,9 +25,16 @@
 		8915102E1F7D7E4500252319 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915102D1F7D7E4500252319 /* Profile.swift */; };
 		891510301F7D7E5500252319 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8915102F1F7D7E5500252319 /* Statistics.swift */; };
 		891510321F7D7E5E00252319 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891510311F7D7E5E00252319 /* Statistics.storyboard */; };
+		89237C491F8418470087F922 /* MapElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89237C481F8418470087F922 /* MapElements.swift */; };
+		89237C4C1F841A010087F922 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89237C4B1F841A010087F922 /* MapModel.swift */; };
+		89237C4E1F841AA00087F922 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89237C4D1F841AA00087F922 /* ApiError.swift */; };
+		8940D6411F8433F20037BD23 /* RemarkGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8940D6401F8433F20037BD23 /* RemarkGroup.swift */; };
 		894109C61F829E4A00D25D81 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894109C51F829E4A00D25D81 /* RoundedButton.swift */; };
 		894109C81F82A0AA00D25D81 /* Msg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894109C71F82A0AA00D25D81 /* Msg.swift */; };
 		894109CE1F82A1EC00D25D81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 894109D01F82A1EC00D25D81 /* Localizable.strings */; };
+		89AF4AC81F841DAD00C9580A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AF4AC71F841DAD00C9580A /* Extensions.swift */; };
+		89AF4ACA1F8426A500C9580A /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AF4AC91F8426A500C9580A /* LocationModel.swift */; };
+		89AF4ACC1F84290C00C9580A /* CLAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AF4ACB1F84290C00C9580A /* CLAnnotation.swift */; };
 		89D064331F82906B007FF348 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064321F82906B007FF348 /* APIManager.swift */; };
 		89D064351F8291AC007FF348 /* Sockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064341F8291AC007FF348 /* Sockets.swift */; };
 		89D064371F8293A6007FF348 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064361F8293A6007FF348 /* Authentication.swift */; };
@@ -81,10 +88,17 @@
 		891510311F7D7E5E00252319 /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
 		8917EEFD1F7D821C004D4BFC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		8917EEFF1F7D821E004D4BFC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		89237C481F8418470087F922 /* MapElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapElements.swift; sourceTree = "<group>"; };
+		89237C4B1F841A010087F922 /* MapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		89237C4D1F841AA00087F922 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		8940D6401F8433F20037BD23 /* RemarkGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkGroup.swift; sourceTree = "<group>"; };
 		894109C51F829E4A00D25D81 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		894109C71F82A0AA00D25D81 /* Msg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Msg.swift; sourceTree = "<group>"; };
 		894109CF1F82A1EC00D25D81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		894109D11F82A1FC00D25D81 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		89AF4AC71F841DAD00C9580A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		89AF4AC91F8426A500C9580A /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		89AF4ACB1F84290C00C9580A /* CLAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLAnnotation.swift; sourceTree = "<group>"; };
 		89D064321F82906B007FF348 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		89D064341F8291AC007FF348 /* Sockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sockets.swift; sourceTree = "<group>"; };
 		89D064361F8293A6007FF348 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -151,6 +165,7 @@
 		89150FEA1F7D7AD400252319 /* collectively */ = {
 			isa = PBXGroup;
 			children = (
+				89237C4A1F8419E20087F922 /* Models */,
 				894109C41F829E3900D25D81 /* utils */,
 				89D064311F829059007FF348 /* API */,
 				89D064301F829044007FF348 /* controllers */,
@@ -191,6 +206,7 @@
 			children = (
 				8915101F1F7D7B2100252319 /* Map.storyboard */,
 				891510211F7D7B3200252319 /* MapController.swift */,
+				89AF4ACB1F84290C00C9580A /* CLAnnotation.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -246,11 +262,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		89237C4A1F8419E20087F922 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89237C4B1F841A010087F922 /* MapModel.swift */,
+				89237C4D1F841AA00087F922 /* ApiError.swift */,
+				89AF4AC91F8426A500C9580A /* LocationModel.swift */,
+				8940D6401F8433F20037BD23 /* RemarkGroup.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		894109C41F829E3900D25D81 /* utils */ = {
 			isa = PBXGroup;
 			children = (
 				894109C51F829E4A00D25D81 /* RoundedButton.swift */,
 				894109C71F82A0AA00D25D81 /* Msg.swift */,
+				89AF4AC71F841DAD00C9580A /* Extensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -273,6 +301,7 @@
 				89D064321F82906B007FF348 /* APIManager.swift */,
 				89D064341F8291AC007FF348 /* Sockets.swift */,
 				89D064361F8293A6007FF348 /* Authentication.swift */,
+				89237C481F8418470087F922 /* MapElements.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -493,19 +522,23 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-collectively/Pods-collectively-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,16 +635,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				891510301F7D7E5500252319 /* Statistics.swift in Sources */,
+				89237C4C1F841A010087F922 /* MapModel.swift in Sources */,
 				894109C61F829E4A00D25D81 /* RoundedButton.swift in Sources */,
 				891510221F7D7B3200252319 /* MapController.swift in Sources */,
 				8915102E1F7D7E4500252319 /* Profile.swift in Sources */,
+				8940D6411F8433F20037BD23 /* RemarkGroup.swift in Sources */,
 				8915101D1F7D7B0A00252319 /* Login.swift in Sources */,
 				89D064351F8291AC007FF348 /* Sockets.swift in Sources */,
+				89237C4E1F841AA00087F922 /* ApiError.swift in Sources */,
+				89AF4ACA1F8426A500C9580A /* LocationModel.swift in Sources */,
 				8915102A1F7D7E3200252319 /* Users.swift in Sources */,
+				89AF4ACC1F84290C00C9580A /* CLAnnotation.swift in Sources */,
 				89150FEC1F7D7AD400252319 /* AppDelegate.swift in Sources */,
+				89AF4AC81F841DAD00C9580A /* Extensions.swift in Sources */,
 				894109C81F82A0AA00D25D81 /* Msg.swift in Sources */,
 				89D064331F82906B007FF348 /* APIManager.swift in Sources */,
 				89D064371F8293A6007FF348 /* Authentication.swift in Sources */,
+				89237C491F8418470087F922 /* MapElements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
