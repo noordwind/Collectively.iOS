@@ -23,6 +23,34 @@
                                     <outlet property="delegate" destination="KyD-J4-XUe" id="r1G-pU-vTg"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5G-jV-WGr">
+                                <rect key="frame" x="167.5" y="398" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="AmF-Uc-VEI"/>
+                                    <constraint firstAttribute="height" constant="40" id="tfn-K9-sOM"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="5" maxX="3" maxY="0.0"/>
+                                <state key="normal" image="handImg">
+                                    <color key="titleShadowColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhL-zR-diS">
+                                <rect key="frame" x="168" y="438" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Gc7-Zq-Nmf"/>
+                                    <constraint firstAttribute="width" constant="40" id="dyr-rA-rjV"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="6" maxX="5" maxY="0.0"/>
+                                <state key="normal" image="bulb"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3d-Sd-KK2">
+                                <rect key="frame" x="167.5" y="478" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XKh-ww-kKC"/>
+                                    <constraint firstAttribute="width" constant="40" id="gaf-cu-CUN"/>
+                                </constraints>
+                                <state key="normal" image="hammer"/>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBg-TP-7rk" userLabel="burger">
                                 <rect key="frame" x="10" y="560" width="48" height="48"/>
                                 <subviews>
@@ -63,12 +91,39 @@
                                     <constraint firstAttribute="height" constant="48" id="yhP-oo-Fxv"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL0-Zf-uKe">
+                                <rect key="frame" x="162" y="558" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="PEz-hd-UKb"/>
+                                    <constraint firstAttribute="height" constant="50" id="QLj-6F-yiM"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="addImg"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY6-vG-Kfg">
+                                <rect key="frame" x="167.5" y="518" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0s9-GC-h6v"/>
+                                    <constraint firstAttribute="width" constant="40" id="p5A-2e-nwv"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="6" maxX="3" maxY="0.0"/>
+                                <state key="normal" image="atention"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="p5G-jV-WGr" firstAttribute="centerX" secondItem="Ypt-ZZ-Bh4" secondAttribute="centerX" id="1hO-Ql-9Ze"/>
+                            <constraint firstItem="ZY6-vG-Kfg" firstAttribute="top" secondItem="A3d-Sd-KK2" secondAttribute="bottom" id="3Tc-cT-cX3"/>
+                            <constraint firstItem="Ypt-ZZ-Bh4" firstAttribute="bottom" secondItem="LL0-Zf-uKe" secondAttribute="bottom" constant="10" id="5Wh-ur-Pjp"/>
+                            <constraint firstItem="A3d-Sd-KK2" firstAttribute="top" secondItem="qhL-zR-diS" secondAttribute="bottom" id="I7t-8s-Sd7"/>
                             <constraint firstItem="tCy-z1-wcT" firstAttribute="leading" secondItem="opZ-vt-I6s" secondAttribute="leading" id="Kz8-e6-WtO"/>
+                            <constraint firstItem="LL0-Zf-uKe" firstAttribute="centerX" secondItem="Ypt-ZZ-Bh4" secondAttribute="centerX" id="Sk4-dY-RjK"/>
                             <constraint firstItem="tCy-z1-wcT" firstAttribute="top" secondItem="opZ-vt-I6s" secondAttribute="top" id="UYd-Ow-TBd"/>
+                            <constraint firstItem="qhL-zR-diS" firstAttribute="top" secondItem="p5G-jV-WGr" secondAttribute="bottom" id="YEh-CZ-Xwu"/>
+                            <constraint firstItem="qhL-zR-diS" firstAttribute="centerX" secondItem="Ypt-ZZ-Bh4" secondAttribute="centerX" id="YeY-PL-Vo9"/>
                             <constraint firstAttribute="trailing" secondItem="tCy-z1-wcT" secondAttribute="trailing" id="bai-YP-WHu"/>
+                            <constraint firstItem="LL0-Zf-uKe" firstAttribute="top" secondItem="ZY6-vG-Kfg" secondAttribute="bottom" id="cqG-4e-Xph"/>
+                            <constraint firstItem="A3d-Sd-KK2" firstAttribute="centerX" secondItem="Ypt-ZZ-Bh4" secondAttribute="centerX" id="fOC-9z-z6R"/>
+                            <constraint firstItem="ZY6-vG-Kfg" firstAttribute="centerX" secondItem="Ypt-ZZ-Bh4" secondAttribute="centerX" id="g01-ra-rts"/>
                             <constraint firstItem="gBg-TP-7rk" firstAttribute="leading" secondItem="Ypt-ZZ-Bh4" secondAttribute="leading" constant="10" id="leP-fd-rQ1"/>
                             <constraint firstItem="Ypt-ZZ-Bh4" firstAttribute="bottom" secondItem="gBg-TP-7rk" secondAttribute="bottom" constant="10" id="zaB-kk-IAC"/>
                             <constraint firstAttribute="bottom" secondItem="tCy-z1-wcT" secondAttribute="bottom" id="zmE-wJ-7bQ"/>
@@ -87,6 +142,7 @@
         <!--Map-->
         <scene sceneID="pge-vY-vNT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="be8-la-GcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3f3-1a-8uO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="lista" id="mBM-Vh-SXc"/>
                     <toolbarItems/>
@@ -100,14 +156,18 @@
                         <segue destination="KyD-J4-XUe" kind="relationship" relationship="rootViewController" id="EEg-9j-wVE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="be8-la-GcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-484" y="148"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addImg" width="116" height="114"/>
+        <image name="atention" width="91" height="96"/>
+        <image name="bulb" width="98" height="99"/>
         <image name="buttonburger" width="39" height="39"/>
         <image name="buttonsbackground" width="140" height="140"/>
+        <image name="hammer" width="93" height="91"/>
+        <image name="handImg" width="99" height="96"/>
         <image name="lista" width="19" height="20"/>
     </resources>
 </document>

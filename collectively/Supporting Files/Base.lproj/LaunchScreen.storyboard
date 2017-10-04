@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WGI-Pr-DU0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainpic" translatesAutoresizingMaskIntoConstraints="NO" id="WGI-Pr-DU0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.42745098039215684" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WGI-Pr-DU0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="1fl-gK-uQk"/>
                             <constraint firstItem="WGI-Pr-DU0" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="CBF-de-49x"/>
@@ -36,4 +36,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mainpic" width="750" height="705"/>
+    </resources>
 </document>
