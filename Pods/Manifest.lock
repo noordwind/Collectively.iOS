@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (4.5.1)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FBSDKCoreKit (4.27.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.27.0):
+    - FBSDKCoreKit
+  - Kingfisher (4.2.0)
+  - Localize-Swift (2.0.0)
+  - ObjectMapper (3.0.0)
+  - PKHUD (4.2.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - Kingfisher
+  - Localize-Swift
+  - ObjectMapper
+  - PKHUD (from `https://github.com/pkluz/PKHUD.git`, branch `release/swift4`)
+
+EXTERNAL SOURCES:
+  PKHUD:
+    :branch: release/swift4
+    :git: https://github.com/pkluz/PKHUD.git
+
+CHECKOUT OPTIONS:
+  PKHUD:
+    :commit: 4d8fbf70ae912dd72280cde0a5c1440ada9a7306
+    :git: https://github.com/pkluz/PKHUD.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FBSDKCoreKit: ebc6c5f5b3f0e72396041050e2266781a38ac587
+  FBSDKLoginKit: 887be4b7452e1c5a3cc4485ce152529965a0c41e
+  Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  PKHUD: 351011b853e6b942e7ee8ad335864cc84c787241
+
+PODFILE CHECKSUM: 1cb95f03943cce20f1d6f261d6120109b513f0db
+
+COCOAPODS: 1.3.1
