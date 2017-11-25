@@ -11,17 +11,26 @@ import MapKit
 
 class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var buttonsStackHeight: NSLayoutConstraint!
+    @IBOutlet weak var stackBottomConstraint: NSLayoutConstraint!
+    
+    var selectedElement: MapModel?
     
     override func viewDidLoad() {
-        
+        mapView.showsUserLocation = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+//        self.navigationController?.isNavigationBarHidden = true
+        addButtonAction(open: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         fetchElements()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     func fetchElements() {
@@ -31,13 +40,31 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
             for el in mapElements {
                 let ann = CLAnnotation()
                 ann.coordinate = CLLocationCoordinate2D(latitude: el.location.latitude, longitude: el.location.longitude)
-                
+                print(el.mediumPhotoUrl)
                 ann.title = el.group?.name ?? "Brak grupy!"
                 ann.subtitle = el.desc
-
+                ann.problem = el
                 anns.append(ann)
             }
             self.updateMap(with: anns)
+        }
+    }
+    
+    @IBAction func addButton(_ sender: Any) {
+        addButtonAction(open: buttonsStackHeight.constant == 0)
+    }
+    
+    func addButtonAction(open: Bool) {
+        if open {
+            buttonsStackHeight.constant = 160
+            stackBottomConstraint.constant = 5
+        } else {
+            buttonsStackHeight.constant = 0
+            stackBottomConstraint.constant = -20
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutSubviews()
         }
     }
     
@@ -69,6 +96,13 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print(view.annotation?.title ?? "")
+        selectedElement = (view.annotation as! CLAnnotation).problem
+        performSegue(withIdentifier: "presentDetails", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let details = segue.destination as? ProblemViewController {
+            details.problem = selectedElement!
+        }
     }
 }

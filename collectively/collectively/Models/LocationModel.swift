@@ -29,6 +29,7 @@ class LocationModel: Mappable {
 //    - value : Melchiora Wańkowicza 8, Kraków, Poland
     var longitude: Double!
     var latitude: Double!
+    var address: String!
     
     func mapping(map: Map) {
         
@@ -37,5 +38,6 @@ class LocationModel: Mappable {
     required init?(map: Map) {
         longitude <- map["longitude"]
         latitude <- map["latitude"]
+        address <- map["address"]
     }
 }

@@ -13,6 +13,10 @@ class MapModel: Mappable {
     var location: LocationModel!
     var group: RemarkGroup?
     var desc: String!
+    var author: String!
+    var negativeVotesCount: Int!
+    var positiveVotesCount: Int!
+    var mediumPhotoUrl: String!
     
     func mapping(map: Map) {
         
@@ -22,6 +26,11 @@ class MapModel: Mappable {
         location <- map["location"]
         desc <- map["description"]
         group <- map["group"]
+        author <- map["author.name"]
+        negativeVotesCount <- map["negativeVotesCount"]
+        positiveVotesCount <- map["positiveVotesCount"]
+        mediumPhotoUrl <- map["photo.medium"]
+        mediumPhotoUrl = mediumPhotoUrl ?? ""
     }
 //    author =         {
 //        name = puchacz;
