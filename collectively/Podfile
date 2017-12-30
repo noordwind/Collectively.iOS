@@ -6,13 +6,13 @@ target 'collectively' do
   use_frameworks!
 
   # Pods for collectively
+    pod 'RxSwift'
+    pod 'p2.OAuth2'
     pod 'FBSDKCoreKit'
     pod 'FBSDKLoginKit'
     pod 'Alamofire'
     pod 'Localize-Swift'
     pod 'PKHUD', :git => 'https://github.com/pkluz/PKHUD.git', :branch => 'release/swift4'
-    pod 'AlamofireObjectMapper'
-    pod 'ObjectMapper'
     pod 'Kingfisher'
     
   target 'collectivelyTests' do

@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import ObjectMapper
 
-class LocationModel: Mappable {
+struct LocationModel: Codable {
 //    ▿ 0 : 2 elements
 //    - key : coordinates
 //    ▿ value : 2 elements
@@ -27,17 +26,7 @@ class LocationModel: Mappable {
 //    ▿ 4 : 2 elements
 //    - key : address
 //    - value : Melchiora Wańkowicza 8, Kraków, Poland
-    var longitude: Double!
-    var latitude: Double!
-    var address: String!
-    
-    func mapping(map: Map) {
-        
-    }
-    
-    required init?(map: Map) {
-        longitude <- map["longitude"]
-        latitude <- map["latitude"]
-        address <- map["address"]
-    }
+    var longitude: Double
+    var latitude: Double
+    var address: String
 }

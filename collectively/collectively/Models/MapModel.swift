@@ -6,32 +6,16 @@
 //
 
 import Foundation
-import ObjectMapper
 
-class MapModel: Mappable {
+struct MapModel: Codable {
     
-    var location: LocationModel!
+    var location: LocationModel
     var group: RemarkGroup?
-    var desc: String!
-    var author: String!
-    var negativeVotesCount: Int!
-    var positiveVotesCount: Int!
-    var mediumPhotoUrl: String!
-    
-    func mapping(map: Map) {
-        
-    }
-    
-    required init?(map: Map) {
-        location <- map["location"]
-        desc <- map["description"]
-        group <- map["group"]
-        author <- map["author.name"]
-        negativeVotesCount <- map["negativeVotesCount"]
-        positiveVotesCount <- map["positiveVotesCount"]
-        mediumPhotoUrl <- map["photo.medium"]
-        mediumPhotoUrl = mediumPhotoUrl ?? ""
-    }
+    var description: String
+    var author: Author
+    var negativeVotesCount: Int
+    var positiveVotesCount: Int
+    var photo: Photo?
 //    author =         {
 //        name = puchacz;
 //        userId = 8502d3b3a1e1418a8ce20fb8f454a501;
@@ -103,4 +87,15 @@ class MapModel: Mappable {
 //    status = "<null>";
 //    updatedAt = "2017-10-03T18:35:55.115Z";
 //    },
+}
+
+struct Author: Codable {
+    var name: String
+    var userId: String
+}
+
+struct Photo: Codable {
+    var big: String?
+    var medium: String?
+    var small: String?
 }

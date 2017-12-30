@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import ObjectMapper
 
-class RemarkGroup: Mappable {
+struct RemarkGroup: Codable {
 //    - key : "group"
 //    ▿ value : 6 elements
 //    ▿ 0 : 2 elements
@@ -31,12 +30,4 @@ class RemarkGroup: Mappable {
 //    - key : members
 //    - value : <null>
     var name: String!
-    
-    func mapping(map: Map) {
-        
-    }
-    
-    required init?(map: Map) {
-        name <- map["name"]
-    }
 }

@@ -19,6 +19,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
+    
+    func authorize() {
+//        ApiClient.shared.authorization { success, error in
+//            var storyboard = UIStoryboard(name: "Login", bundle: nil)
+//            self.indicator.stopAnimating()
+//            if success {
+//                storyboard = UIStoryboard(name: "Questionnaires", bundle: nil)
+//            }
+//
+//            DispatchQueue.main.async {
+//                UIApplication.shared.keyWindow?.rootViewController = storyboard.instantiateInitialViewController()
+//                UIApplication.shared.keyWindow?.makeKeyAndVisible()
+//            }
+//        }
+    }
+    
+    func logout() {
+        APIManager.shared.oauth2.forgetTokens()
+        APIManager.shared.oauth2.username = nil
+        APIManager.shared.oauth2.password = nil
+        
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        DispatchQueue.main.async {
+            UIApplication.shared.keyWindow?.rootViewController = storyboard.instantiateInitialViewController()
+            UIApplication.shared.keyWindow?.makeKeyAndVisible()
+        }
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -12,6 +12,6 @@ class DescriptionCell: UITableViewCell {
     @IBOutlet weak var desc: UITextView!
     
     func setupWith(problem: MapModel) {
-        desc.text = problem.desc
+        desc.text = problem.description
     }
 }

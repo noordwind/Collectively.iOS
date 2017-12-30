@@ -8,15 +8,21 @@
 
 import UIKit
 import MapKit
+import RxSwift
 
-class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var buttonsStackHeight: NSLayoutConstraint!
     @IBOutlet weak var stackBottomConstraint: NSLayoutConstraint!
     
+    var viewModel: MapViewModel!
+    var disposeBag: DisposeBag = DisposeBag()
+    
     var selectedElement: MapModel?
     
     override func viewDidLoad() {
+        setupViewModel()
+        setupBinding()
         mapView.showsUserLocation = true
     }
     
@@ -26,28 +32,54 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        fetchElements()
+        _ = self.viewModel.getMapModels().subscribe { event in
+            switch event {
+            case .completed:
+                print("refreshed")
+            case .error(let error):
+                //handleError(error)
+                print(error)
+            }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
     }
     
-    func fetchElements() {
-        APIManager.map.getElements() { mapElements in
-            var anns = [CLAnnotation]()
-            
-            for el in mapElements {
-                let ann = CLAnnotation()
-                ann.coordinate = CLLocationCoordinate2D(latitude: el.location.latitude, longitude: el.location.longitude)
-                print(el.mediumPhotoUrl)
-                ann.title = el.group?.name ?? "Brak grupy!"
-                ann.subtitle = el.desc
-                ann.problem = el
-                anns.append(ann)
+    fileprivate func setupViewModel() {
+        self.viewModel = MapViewModel()
+        self.viewModel.getMapModels().subscribe { [weak self] event in
+            guard let weakSelf = self else { return }
+            switch event {
+            case .completed:
+                weakSelf.makeAnnotations(with: weakSelf.viewModel.models.value)
+            case .error(let error):
+                // TODO: handle error
+                print(error)
             }
-            self.updateMap(with: anns)
-        }
+            }.disposed(by: self.disposeBag)
+    }
+    
+    fileprivate func setupBinding() {
+        self.viewModel.models.asObservable().subscribe { [weak self] (event) in
+            guard let weakSelf = self else { return }
+            switch event {
+            case .next(_):
+                weakSelf.makeAnnotations(with: weakSelf.viewModel.models.value)
+            case .error(let error):
+                // TODO: handle error
+                print(error)
+            case .completed:
+                weakSelf.makeAnnotations(with: weakSelf.viewModel.models.value)
+                print(event)
+            }
+            }.disposed(by: self.disposeBag)
+    }
+    
+    func makeAnnotations(with elements: [MapModel]) {
+        let anns = self.viewModel.makeAnnotations()
+        self.updateMap(with: anns)
     }
     
     @IBAction func addButton(_ sender: Any) {
@@ -72,6 +104,15 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
         mapView.showAnnotations(annotations, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let details = segue.destination as? ProblemViewController {
+            details.problem = selectedElement!
+        }
+    }
+}
+
+extension MapController: MKMapViewDelegate {
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         // Don't want to show a custom image if the annotation is the user's location.
         guard !(annotation is MKUserLocation) else {
@@ -83,14 +124,14 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
             annotationView?.canShowCallout = true
             annotationView?.rightCalloutAccessoryView = UIButton(type: .infoLight)
-            let subtitleView = UILabel()
-            subtitleView.font = subtitleView.font.withSize(12)
-            subtitleView.numberOfLines = 0
-            subtitleView.text = annotation.subtitle ?? " "
-            annotationView!.detailCalloutAccessoryView = subtitleView
         } else {
             annotationView?.annotation = annotation
         }
+        let subtitleView = UILabel()
+        subtitleView.font = subtitleView.font.withSize(12)
+        subtitleView.numberOfLines = 0
+        subtitleView.text = annotation.subtitle ?? " "
+        annotationView!.detailCalloutAccessoryView = subtitleView
         
         return annotationView
     }
@@ -98,11 +139,5 @@ class MapController: UIViewController, CLLocationManagerDelegate, MKMapViewDeleg
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         selectedElement = (view.annotation as! CLAnnotation).problem
         performSegue(withIdentifier: "presentDetails", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let details = segue.destination as? ProblemViewController {
-            details.problem = selectedElement!
-        }
     }
 }
