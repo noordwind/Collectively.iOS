@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="group" rowHeight="115" id="gWF-d0-S1E" customClass="GroupCell" customModule="collectively" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="477" height="201"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gWF-d0-S1E" id="bmy-1w-R4q">
+                <rect key="frame" x="0.0" y="0.0" width="477" height="200.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainpic" translatesAutoresizingMaskIntoConstraints="NO" id="9s6-iD-u6x">
+                        <rect key="frame" x="0.0" y="0.0" width="477" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="hcp-PW-H0U"/>
+                        </constraints>
+                    </imageView>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dc2-RV-7KD">
+                        <rect key="frame" x="0.0" y="160" width="477" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reported By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jef-PN-ocu">
+                                <rect key="frame" x="15" y="9" width="442" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Jef-PN-ocu" secondAttribute="trailing" constant="20" symbolic="YES" id="6lP-gm-WkH"/>
+                            <constraint firstAttribute="height" constant="40" id="R1B-FA-0ab"/>
+                            <constraint firstAttribute="bottom" secondItem="Jef-PN-ocu" secondAttribute="bottom" constant="10" id="YTY-h2-rVf"/>
+                            <constraint firstItem="Jef-PN-ocu" firstAttribute="leading" secondItem="dc2-RV-7KD" secondAttribute="leading" constant="15" id="rPH-JC-vLT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9s6-iD-u6x" firstAttribute="top" secondItem="bmy-1w-R4q" secondAttribute="top" id="5NA-Te-MYa"/>
+                    <constraint firstAttribute="trailing" secondItem="dc2-RV-7KD" secondAttribute="trailing" id="6v0-5v-dsQ"/>
+                    <constraint firstAttribute="bottom" secondItem="9s6-iD-u6x" secondAttribute="bottom" id="PH6-9U-0hI"/>
+                    <constraint firstAttribute="bottom" secondItem="dc2-RV-7KD" secondAttribute="bottom" id="XKc-iE-PKf"/>
+                    <constraint firstAttribute="trailing" secondItem="9s6-iD-u6x" secondAttribute="trailing" id="aNs-ry-iWo"/>
+                    <constraint firstItem="9s6-iD-u6x" firstAttribute="leading" secondItem="bmy-1w-R4q" secondAttribute="leading" id="dXY-kk-EEU"/>
+                    <constraint firstItem="dc2-RV-7KD" firstAttribute="leading" secondItem="bmy-1w-R4q" secondAttribute="leading" id="jhI-yl-xbD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backgroundImage" destination="9s6-iD-u6x" id="YEn-o2-p1e"/>
+                <outlet property="reportedByLabel" destination="Jef-PN-ocu" id="bbp-4Q-7pl"/>
+            </connections>
+            <point key="canvasLocation" x="382.5" y="80.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mainpic" width="750" height="705"/>
+    </resources>
+</document>
