@@ -9,9 +9,7 @@
 import Foundation
 import Alamofire
 
-class Authentication: APIManager {
-    override init() {
-    }
+class Authentication {
     //    register
     //    Content-Type:application/json
     //    Accept:application/json
@@ -36,13 +34,13 @@ class Authentication: APIManager {
     //    }
     
     func authorization(email: String, password: String, completion: @escaping LoginResponse) {
-        let url = base + "/sign-in"
+        let url = APIManager.shared.base + "/sign-in"
         let param: [String: Any] = ["email": email,
                                     "password": password,
                                     "provider": "collectively"]
         
         
-        alamo.request(url,
+        APIManager.shared.alamo.request(url,
                       method: .post,
                       parameters: param,
                       encoding: JSONEncoding.default)
@@ -53,13 +51,13 @@ class Authentication: APIManager {
     }
     
     func login(user: String, password: String, completion: @escaping LoginResponse) {
-        oauth2.username = user
-        oauth2.password = password
+        APIManager.shared.oauth2.username = user
+        APIManager.shared.oauth2.password = password
         
         //to exclude from doubleups
-        self.oauth2.internalAfterAuthorizeOrFail = nil
+        APIManager.shared.oauth2.internalAfterAuthorizeOrFail = nil
         
-        oauth2.authorize { authParameters, error in
+        APIManager.shared.oauth2.authorize { authParameters, error in
             if let params = authParameters {
                 print("Authorized! Access token is in `oauth2.accessToken`")
                 print("Authorized! Additional parameters: \(params)")
@@ -74,12 +72,12 @@ class Authentication: APIManager {
     
     func fb(token: String, completion: @escaping (Bool) -> Void) {
 //        let key = "Bearer " + valueForAPIKey(keyname: API_KEY)
-        let url = base + "/sign-in"
+        let url = APIManager.shared.base + "/sign-in"
         let param: [String: Any] = ["accessToken": token,
                      "provider": "facebook"]
 
         
-        alamo.request(url,
+        APIManager.shared.alamo.request(url,
                       method: .post,
                       parameters: param,
                       encoding: JSONEncoding.default)

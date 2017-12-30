@@ -127,6 +127,8 @@ extension MapController: MKMapViewDelegate {
         } else {
             annotationView?.annotation = annotation
         }
+        
+        annotationView?.pinTintColor = .themeBlue
         let subtitleView = UILabel()
         subtitleView.font = subtitleView.font.withSize(12)
         subtitleView.numberOfLines = 0

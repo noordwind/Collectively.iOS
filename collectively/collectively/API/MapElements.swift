@@ -10,18 +10,14 @@ import Foundation
 import Alamofire
 import RxSwift
 
-class MapElements: APIManager {
-    override init() { }
+class MapElements {
     
     func getElements() -> Single<[MapModel]> {
         return Single<[MapModel]>.create { emitter in
 //        let key = "Bearer " + valueForAPIKey(keyname: API_KEY)
-            let url = self.base + "remarks" + "?" + "&results=100"
-            let headers: [String: String] = ["Content-Type": "application/json",
-                                             "Accept": "application/json"]
+            let url = APIManager.shared.base + "remarks" + "?" + "&results=100"
             
-            self.alamo.request(url,
-                          headers: headers)
+            APIManager.shared.alamo.request(url)
                 .responseJSON { response in
                     if let error = response.result.error {
                         print(error)
