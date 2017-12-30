@@ -11,24 +11,9 @@ import Alamofire
 import p2_OAuth2
 import RxSwift
 
-let API_KEY = "API_KEY"
-
 enum BackendError: Error {
     case urlError(reason: String)
     case objectSerialization(reason: String)
-}
-
-func valueForAPIKey(keyname: String) -> String {
-    // Get the file path for keys.plist
-    let filePath = Bundle.main.path(forResource: "Keys", ofType: "plist")
-    
-    // Put the keys in a dictionary
-    let plist = NSDictionary(contentsOfFile: filePath!)
-    
-    // Pull the value for the key
-    let value: String = plist?.object(forKey: keyname) as! String
-    
-    return value
 }
 
 typealias LoginResponse = (Bool, Error?) -> Void
