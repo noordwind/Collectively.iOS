@@ -14,7 +14,7 @@ class GroupCell: UITableViewCell {
     @IBOutlet weak var reportedByLabel: UILabel!
     
     func setupWith(problem: MapModel) {
-        reportedByLabel.text = "Reported by: " + problem.author.name
+        reportedByLabel.text = "Zgłoszone przez: " + problem.author.name
         
         if let url = URL(string: problem.photo?.medium ?? "") {
             backgroundImage.kf.setImage(with: url)

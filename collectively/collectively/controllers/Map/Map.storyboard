@@ -156,11 +156,11 @@
             </objects>
             <point key="canvasLocation" x="964" y="148"/>
         </scene>
-        <!--Map-->
+        <!--Mapa-->
         <scene sceneID="pge-vY-vNT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3f3-1a-8uO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="lista" id="mBM-Vh-SXc"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="lista" id="mBM-Vh-SXc"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
