@@ -17,4 +17,5 @@ DerivedData
 *.xcuserstate
 *.xcuserdatad
 /collectively/Pods
+/Pods
 Keys.plist

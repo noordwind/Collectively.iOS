@@ -1,1 +1,0 @@
-# Collectively.iOS

@@ -18,11 +18,15 @@ target 'collectively' do
   target 'collectivelyTests' do
     inherit! :search_paths
     # Pods for testing
+	pod 'Quick'
+   	pod 'Nimble'
   end
 
   target 'collectivelyUITests' do
     inherit! :search_paths
     # Pods for testing
+	pod 'Quick'
+    	pod 'Nimble'
   end
 
 end
