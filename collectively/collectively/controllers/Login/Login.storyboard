@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Elw-kK-dd4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Elw-kK-dd4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,14 +81,28 @@
                                     <constraint firstItem="yVH-jd-zsR" firstAttribute="leading" secondItem="4dr-wG-hze" secondAttribute="trailing" constant="10" id="zdn-qv-tT8"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNQ-6n-dsO" customClass="RoundedButton" customModule="collectively" customModuleProvider="target">
+                                <rect key="frame" x="121.5" y="587" width="132.5" height="44"/>
+                                <color key="backgroundColor" red="0.20975455639999999" green="0.32758608459999999" blue="0.5682998896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Zarejestruj">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="N3b-lA-nWc" kind="show" id="zJ9-iT-bTk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JJ9-ZL-53D" firstAttribute="leading" secondItem="CeM-d6-JZF" secondAttribute="leading" constant="50" id="0rc-9l-RhV"/>
+                            <constraint firstItem="XNQ-6n-dsO" firstAttribute="top" secondItem="JJ9-ZL-53D" secondAttribute="bottom" constant="20" id="CL1-jM-IDf"/>
+                            <constraint firstItem="XNQ-6n-dsO" firstAttribute="centerX" secondItem="CeM-d6-JZF" secondAttribute="centerX" id="OgG-dU-bKZ"/>
                             <constraint firstItem="CeM-d6-JZF" firstAttribute="trailing" secondItem="P62-yI-7bo" secondAttribute="trailing" id="Yrn-1k-gCh"/>
                             <constraint firstItem="P62-yI-7bo" firstAttribute="leading" secondItem="CeM-d6-JZF" secondAttribute="leading" id="a98-0n-TE7"/>
                             <constraint firstItem="CeM-d6-JZF" firstAttribute="trailing" secondItem="JJ9-ZL-53D" secondAttribute="trailing" constant="50" id="dtH-O6-ulz"/>
+                            <constraint firstItem="XNQ-6n-dsO" firstAttribute="height" secondItem="JJ9-ZL-53D" secondAttribute="height" id="hKE-Ij-dDV"/>
                             <constraint firstItem="P62-yI-7bo" firstAttribute="centerY" secondItem="CeM-d6-JZF" secondAttribute="centerY" constant="-50" id="m8A-eF-g3Q"/>
+                            <constraint firstItem="XNQ-6n-dsO" firstAttribute="width" secondItem="4dr-wG-hze" secondAttribute="width" id="oqd-Wn-Dhl"/>
                             <constraint firstItem="CeM-d6-JZF" firstAttribute="bottom" secondItem="JJ9-ZL-53D" secondAttribute="bottom" constant="100" id="pMO-O6-WLr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CeM-d6-JZF"/>
@@ -97,6 +111,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPm-38-hY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64.799999999999997" y="108.39580209895054"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="9tJ-eD-Sbt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Registration" id="N3b-lA-nWc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAX-VB-Ya9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="108"/>
         </scene>
     </scenes>
 </document>

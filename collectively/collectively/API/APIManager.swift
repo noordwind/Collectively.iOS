@@ -57,4 +57,5 @@ class APIManager: NSObject {
         sessionManager.retrier = retrier
         self.alamo = sessionManager
     }
+    
 }

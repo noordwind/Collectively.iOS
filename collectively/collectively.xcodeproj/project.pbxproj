@@ -51,6 +51,9 @@
 		89AF4AC81F841DAD00C9580A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AF4AC71F841DAD00C9580A /* Extensions.swift */; };
 		89AF4ACA1F8426A500C9580A /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AF4AC91F8426A500C9580A /* LocationModel.swift */; };
 		89AF4ACC1F84290C00C9580A /* CLAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AF4ACB1F84290C00C9580A /* CLAnnotation.swift */; };
+		89CCF07920D98D8F00B8B458 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CCF07820D98D8F00B8B458 /* RegistrationController.swift */; };
+		89CCF07B20D98DB200B8B458 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CCF07A20D98DB200B8B458 /* Registration.storyboard */; };
+		89CCF07D20D98E2C00B8B458 /* RegistrationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CCF07C20D98E2C00B8B458 /* RegistrationAPI.swift */; };
 		89D064331F82906B007FF348 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064321F82906B007FF348 /* APIManager.swift */; };
 		89D064351F8291AC007FF348 /* Sockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064341F8291AC007FF348 /* Sockets.swift */; };
 		89D064371F8293A6007FF348 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D064361F8293A6007FF348 /* Authentication.swift */; };
@@ -130,6 +133,9 @@
 		89AF4AC71F841DAD00C9580A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		89AF4AC91F8426A500C9580A /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		89AF4ACB1F84290C00C9580A /* CLAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLAnnotation.swift; sourceTree = "<group>"; };
+		89CCF07820D98D8F00B8B458 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		89CCF07A20D98DB200B8B458 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		89CCF07C20D98E2C00B8B458 /* RegistrationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAPI.swift; sourceTree = "<group>"; };
 		89D064321F82906B007FF348 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		89D064341F8291AC007FF348 /* Sockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sockets.swift; sourceTree = "<group>"; };
 		89D064361F8293A6007FF348 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -349,11 +355,21 @@
 			path = main;
 			sourceTree = "<group>";
 		};
+		89CCF07720D98D7300B8B458 /* registration */ = {
+			isa = PBXGroup;
+			children = (
+				89CCF07820D98D8F00B8B458 /* RegistrationController.swift */,
+				89CCF07A20D98DB200B8B458 /* Registration.storyboard */,
+			);
+			path = registration;
+			sourceTree = "<group>";
+		};
 		89D064301F829044007FF348 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8937874B1FCA03820044A704 /* problem controller */,
 				8986EEB41F856EAC0015B534 /* main */,
+				89CCF07720D98D7300B8B458 /* registration */,
 				891510191F7D7AF300252319 /* login */,
 				891510241F7D7E0300252319 /* statistics */,
 				8915101E1F7D7B1700252319 /* map */,
@@ -371,6 +387,7 @@
 				89D064341F8291AC007FF348 /* Sockets.swift */,
 				89D064361F8293A6007FF348 /* Authentication.swift */,
 				89237C481F8418470087F922 /* MapElements.swift */,
+				89CCF07C20D98E2C00B8B458 /* RegistrationAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -514,6 +531,7 @@
 				89150FF31F7D7AD400252319 /* Assets.xcassets in Resources */,
 				891510281F7D7E2800252319 /* Users.storyboard in Resources */,
 				894109CE1F82A1EC00D25D81 /* Localizable.strings in Resources */,
+				89CCF07B20D98DB200B8B458 /* Registration.storyboard in Resources */,
 				893787521FCA049C0044A704 /* GroupCell.xib in Resources */,
 				893787621FCA12930044A704 /* VoteCell.xib in Resources */,
 				8915102C1F7D7E3B00252319 /* Profile.storyboard in Resources */,
@@ -722,6 +740,7 @@
 			files = (
 				891510301F7D7E5500252319 /* Statistics.swift in Sources */,
 				89237C4C1F841A010087F922 /* MapModel.swift in Sources */,
+				89CCF07920D98D8F00B8B458 /* RegistrationController.swift in Sources */,
 				894109C61F829E4A00D25D81 /* RoundedButton.swift in Sources */,
 				893787601FCA127D0044A704 /* VoteCell.swift in Sources */,
 				891510221F7D7B3200252319 /* MapController.swift in Sources */,
@@ -732,6 +751,7 @@
 				8937874F1FCA03AE0044A704 /* ProblemViewController.swift in Sources */,
 				89D064351F8291AC007FF348 /* Sockets.swift in Sources */,
 				8923C9961FF77D1100746986 /* MapViewModel.swift in Sources */,
+				89CCF07D20D98E2C00B8B458 /* RegistrationAPI.swift in Sources */,
 				893787561FCA07EF0044A704 /* TableViewExtension.swift in Sources */,
 				89AF4ACA1F8426A500C9580A /* LocationModel.swift in Sources */,
 				8915102A1F7D7E3200252319 /* Users.swift in Sources */,
