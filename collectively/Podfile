@@ -6,7 +6,6 @@ target 'collectively' do
   use_frameworks!
 
   # Pods for collectively
-    pod 'RxSwift'
     pod 'p2.OAuth2'
     pod 'FBSDKCoreKit'
     pod 'FBSDKLoginKit'

@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import RxSwift
 
 class MapController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
@@ -16,13 +15,11 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var stackBottomConstraint: NSLayoutConstraint!
     
     var viewModel: MapViewModel!
-    var disposeBag: DisposeBag = DisposeBag()
     
     var selectedElement: MapModel?
     
     override func viewDidLoad() {
         setupViewModel()
-        setupBinding()
         mapView.showsUserLocation = true
     }
     
@@ -32,11 +29,11 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        _ = self.viewModel.getMapModels().subscribe { event in
+        _ = self.viewModel.getMapModels() { event  in
             switch event {
-            case .completed:
-                print("refreshed")
-            case .error(let error):
+            case .success(let models):
+                print("\(models.count)")
+            case .failure(let error):
                 //handleError(error)
                 print(error)
             }
@@ -49,32 +46,16 @@ class MapController: UIViewController, CLLocationManagerDelegate {
     
     fileprivate func setupViewModel() {
         self.viewModel = MapViewModel()
-        self.viewModel.getMapModels().subscribe { [weak self] event in
+        self.viewModel.getMapModels() { [weak self] event in
             guard let weakSelf = self else { return }
             switch event {
-            case .completed:
-                weakSelf.makeAnnotations(with: weakSelf.viewModel.models.value)
-            case .error(let error):
+            case .success(let models):
+                weakSelf.makeAnnotations(with: models)
+            case .failure(let error):
                 // TODO: handle error
                 print(error)
             }
-            }.disposed(by: self.disposeBag)
-    }
-    
-    fileprivate func setupBinding() {
-        self.viewModel.models.asObservable().subscribe { [weak self] (event) in
-            guard let weakSelf = self else { return }
-            switch event {
-            case .next(_):
-                weakSelf.makeAnnotations(with: weakSelf.viewModel.models.value)
-            case .error(let error):
-                // TODO: handle error
-                print(error)
-            case .completed:
-                weakSelf.makeAnnotations(with: weakSelf.viewModel.models.value)
-                print(event)
             }
-            }.disposed(by: self.disposeBag)
     }
     
     func makeAnnotations(with elements: [MapModel]) {

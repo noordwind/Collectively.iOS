@@ -9,7 +9,6 @@
 import Foundation
 import Alamofire
 import p2_OAuth2
-import RxSwift
 
 enum BackendError: Error {
     case urlError(reason: String)
@@ -28,7 +27,7 @@ class APIManager: NSObject {
     var loader: OAuth2DataLoader!
     
     static let auth = Authentication()
-    static let map = MapElements()
+//    static let map = MapElements()
     
     override init() {
         super.init()

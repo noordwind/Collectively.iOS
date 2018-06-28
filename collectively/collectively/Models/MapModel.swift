@@ -9,13 +9,13 @@ import Foundation
 
 struct MapModel: Codable {
     
-    var location: LocationModel
-    var group: RemarkGroup?
-    var description: String
-    var author: Author
-    var negativeVotesCount: Int
-    var positiveVotesCount: Int
-    var photo: Photo?
+    let location: LocationModel
+    let group: RemarkGroup?
+    let description: String
+    let author: Author
+    let negativeVotesCount: Int
+    let positiveVotesCount: Int
+    let photo: Photo?
 //    author =         {
 //        name = puchacz;
 //        userId = 8502d3b3a1e1418a8ce20fb8f454a501;
